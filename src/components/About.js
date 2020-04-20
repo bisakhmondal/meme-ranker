@@ -5,7 +5,7 @@ const About=()=>{
     return (
         <div>
         <div className= 'bgg' style={{backgroundImage: `url(${Background})`,width: "100%",height: "800px",backgroundRepeat:"no-repeat"}} />
-         <div className="jumbotron">
+         <div className="jumbotron jjj">
         <div class="container pa2 ">
           <h1 class="display-2 f2 ">{`Hi! Bisakh Here :-D`}</h1>
           <p >This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
