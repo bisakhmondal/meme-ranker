@@ -15,7 +15,8 @@ const Hero=()=>{
       <div class="cf ">
         {/* <label class="clip" for="email-address">Email Address</label> */}
         {/* <label for="comment" class="f3 b">Links</label> */}
-        <input class="f6 f5-l binput-reset bn fl black-80 bg-white pa3 lh-solid w-80  br2-ns br--left-ns " placeholder="image url" type="text" name="email-address" id="email-address" />
+        <input class="f6 f5-l binput-reset bn fl black-80 bg-white pa3 lh-solid w-40  br2-ns br bw2 b--black  " placeholder="image url" type="text" name="email-address" id="email-address" />
+        <input class="f6 f5-l binput-reset bn fl black-80 bg-white pa3 lh-solid w-40  " placeholder="Description" type="text" name="email-address" id="email-address" />
         <input class="f6 f5-l button-reset fl pv3 tc bn bg-animate bg-blue hover-bg-black white pointer w-20   br2-ns br--right-ns " type="submit" value="Submit" />
       </div>
     </div>

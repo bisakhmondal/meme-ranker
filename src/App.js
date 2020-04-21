@@ -23,7 +23,7 @@ class App extends React.Component{
             <About />
           </Route>
             <Route path="/ranking">
-              <Rank url={['https://i.imgflip.com/1jwhww.jpg','https://i.imgflip.com/tau4.jpg']} />
+              <Rank />
             </Route>
         </Switch> 
   </Router>
