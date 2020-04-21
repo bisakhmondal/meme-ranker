@@ -47,6 +47,7 @@ class Rank extends React.Component{
         :
         <div className='tc' style={{height:"800px"}}><br /><br/><br/>
          <p className='tc f2 black-80'> Welcome to the Ranking Section</p>
+         <p className='tc f2 black-80'> Select One</p>
          
         <section className="cf dib br3 tc bw5 w-40 ma2 grow shadow-5 pa2" onClick= {()=>this.submitResponse(1)}>
             <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
