@@ -1,112 +1,36 @@
 import React from 'react';
 import Card from './Card';
-const CardList=()=>{
-const memes= [
-    {
-        "id": "181913649",
-        "name": "Drake Hotline Bling",
-        "url": "https://i.imgflip.com/30b1gx.jpg",
-        "width": 1200,
-        "height": 1200,
-        "box_count": 2
-    },
-    {
-        "id": "112126428",
-        "name": "Distracted Boyfriend",
-        "url": "https://i.imgflip.com/1ur9b0.jpg",
-        "width": 1200,
-        "height": 800,
-        "box_count": 3
-    },
-    {
-        "id": "87743020",
-        "name": "Two Buttons",
-        "url": "https://i.imgflip.com/1g8my4.jpg",
-        "width": 600,
-        "height": 908,
-        "box_count": 2
-    },
-    {
-        "id": "129242436",
-        "name": "Change My Mind",
-        "url": "https://i.imgflip.com/24y43o.jpg",
-        "width": 482,
-        "height": 361,
-        "box_count": 2
-    },
-    {
-        "id": "102156234",
-        "name": "Mocking Spongebob",
-        "url": "https://i.imgflip.com/1otk96.jpg",
-        "width": 502,
-        "height": 353,
-        "box_count": 2
-    },
-    {
-        "id": "124822590",
-        "name": "Left Exit 12 Off Ramp",
-        "url": "https://i.imgflip.com/22bdq6.jpg",
-        "width": 804,
-        "height": 767,
-        "box_count": 3
-    },
-    {
-        "id": "438680",
-        "name": "Batman Slapping Robin",
-        "url": "https://i.imgflip.com/9ehk.jpg",
-        "width": 400,
-        "height": 387,
-        "box_count": 2
-    },
-    {
-        "id": "131087935",
-        "name": "Running Away Balloon",
-        "url": "https://i.imgflip.com/261o3j.jpg",
-        "width": 761,
-        "height": 1024,
-        "box_count": 5
-    },
-    {
-        "id": "188390779",
-        "name": "Woman Yelling At Cat",
-        "url": "https://i.imgflip.com/345v97.jpg",
-        "width": 680,
-        "height": 438,
-        "box_count": 2
-    },
-    {
-        "id": "217743513",
-        "name": "UNO Draw 25 Cards",
-        "url": "https://i.imgflip.com/3lmzyx.jpg",
-        "width": 500,
-        "height": 494,
-        "box_count": 2
-    },
-    {
-        "id": "222403160",
-        "name": "Bernie I Am Once Again Asking For Your Support",
-        "url": "https://i.imgflip.com/3oevdk.jpg",
-        "width": 750,
-        "height": 750,
-        "box_count": 2
-    },
-    {
-        "id": "93895088",
-        "name": "Expanding Brain",
-        "url": "https://i.imgflip.com/1jwhww.jpg",
-        "width": 857,
-        "height": 1202,
-        "box_count": 4
-    }];
-
-    const meme=memes.map((val,i)=>{
-        return <Card meme={val} />
-    });
-    console.log(meme);
-    return (
-        <div>
-        {meme}
-        </div>
-    )
+import axios from 'axios';
+class CardList extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            memes:[]
+        }
+    }
+    componentDidMount(){
+        this.fetchData();
+    }
+    fetchData=async()=>{
+        const route=process.env.REACT_APP_BACKEND+'main';
+        const memes=await axios.get(route);
+        this.setState({memes:memes.data});
+    }
+    render(){
+        if(this.state.memes.length===0){
+            return <h1 className='f1 tc'>Loading</h1>
+        }
+        const lis=this.state.memes.filter((val)=>val.name.toLowerCase().includes(this.props.ip.toLowerCase()));
+        const meme=lis.map((val)=>{
+            return <Card meme={val} />
+        });
+    
+        return (
+            <div className='tc'>
+            <p className='f2 tc'> Top Picks</p>
+            {meme}
+            </div>
+        )
+        }
 }
 export default CardList;

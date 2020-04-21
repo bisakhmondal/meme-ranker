@@ -1,23 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link,Switch } from "react-router-dom";
+import React,{useState} from 'react';
+import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
 import './App.css';
 import Navigation from './components/navigation';
 import Hero from './components/jumbo';
 import CardList from './components/CardList';
 import Rank from './components/Rank';
 import About from './components/About';
-class App extends React.Component{
-
-  render(){
+const App=()=>{
+  const [input,setIp]=useState('');
     return (
       <Router>
       {/* <div> */}
       {/* <Hero /> */}
-        <Navigation />
+        <Navigation  sip={setIp} />
          <Switch>
-          <Route exact path="/">
+          <Route exact path="/" >
           <Hero />
-          <CardList />
+          <CardList ip={input}/>
           </Route>
           <Route path="/about">
             <About />
@@ -30,7 +29,6 @@ class App extends React.Component{
       
 
     )
-  }
 }
 
 export default App;
