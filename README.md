@@ -1,3 +1,9 @@
+## This is a Pet Project, especially focussing on ranking Memes  XD.
+
+Basic Score= 1400.
+
+## [Backend here](https://github.com/bisakhmondal/memeRankerBackend.git)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
