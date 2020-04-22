@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
+import { HashRouter as Router, Route,Switch } from "react-router-dom";
 import './App.css';
 import Navigation from './components/navigation';
 import Hero from './components/jumbo';
@@ -10,8 +10,6 @@ const App=()=>{
   const [input,setIp]=useState('');
     return (
       <Router>
-      {/* <div> */}
-      {/* <Hero /> */}
         <Navigation  sip={setIp} />
          <Switch>
           <Route exact path="/" >
