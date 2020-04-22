@@ -28,8 +28,8 @@ const Hero=()=>{
   }
   return (
         <div class="jumbotron">
-        <div class="container pa2">
-          <h1 class="display-2 pa2">{`Welcome Memers ;)`}</h1>
+        <div class="container">
+          <h1 class="display-3">{`Welcome Memers ;)`}</h1>
           <p className='f3 tc'>A site to checkout trending memes based on their popularity, user votes. Feel free to cast your vote too in the <Link to='/ranking'>Rank</Link> section.</p>
           <div class="pa0-l">
   <div class="bg-animate shadow-5 center mw7  pa4 br3-ns ba b--black-10">
