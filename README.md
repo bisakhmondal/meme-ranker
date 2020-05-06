@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/bisakhmondal/meme-ranker.svg?branch=master)](https://travis-ci.com/bisakhmondal/meme-ranker)
 ## This is a Pet Project, especially focussing on ranking Memes  XD.
 
 Basic Score= 1400.
