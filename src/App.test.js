@@ -18,9 +18,10 @@ test('render About page', () => {
   expect(linkElement1).toBeInTheDocument();
   expect(linkElement2).toBeInTheDocument();
 });
-test('render Rank page', () => {
-  const { getByText } = render(<Rank />);
-  const linkElement = getByText(/Select One/i);
-  expect(linkElement).toBeInTheDocument();
+//Not required
+// test('render Rank page', () => {
+//   const { getByText } = render(<Rank />);
+//   const linkElement = getByText(/Select One/i);
+//   expect(linkElement).toBeInTheDocument();
 
-});
+// });
