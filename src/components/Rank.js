@@ -50,18 +50,18 @@ class Rank extends React.Component{
          <p className='tc f2 black-80'> Select One</p>
          
         <section className="cf dib br3 tc bw5 w-40 ma2 grow shadow-5 pa2" onClick= {()=>this.submitResponse(1)}>
-            <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
-                <div class="aspect-ratio aspect-ratio--1x1">
+            <article className="fl w-100 w-50-m  w-25-ns pa2-ns">
+                <div className="aspect-ratio aspect-ratio--1x1">
                 <img src={this.state.url[0].url} alt=''
-                class="db bg-center cover aspect-ratio--object" />
+                className="db bg-center cover aspect-ratio--object" />
                 </div>
             </article>
         </section>
-        <section class="cf dib br3 tc bw5 w-40 ma2 grow shadow-5 pa2" onClick= {()=>this.submitResponse(2)}>
-            <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
-                <div class="aspect-ratio aspect-ratio--1x1">
+        <section className="cf dib br3 tc bw5 w-40 ma2 grow shadow-5 pa2" onClick= {()=>this.submitResponse(2)}>
+            <article className="fl w-100 w-50-m  w-25-ns pa2-ns">
+                <div className="aspect-ratio aspect-ratio--1x1">
                 <img src={this.state.url[1].url} alt=''
-                class="db bg-center cover aspect-ratio--object" />
+                className="db bg-center cover aspect-ratio--object" />
                 </div>
             </article>
         </section><br/><br/>
