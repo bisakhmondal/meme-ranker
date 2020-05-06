@@ -9,10 +9,10 @@ script:
   - npm run test:coverage
   - npm run build
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $travis_token
-  local_dir: build
-  on:
-    branch: master
+#deploy:
+ # provider: pages
+  #skip_cleanup: true
+  #github_token: $travis_token
+  #local_dir: build
+  #on:
+  #  branch: master
